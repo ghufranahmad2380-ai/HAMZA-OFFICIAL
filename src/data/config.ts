@@ -1,0 +1,182 @@
+import type { SiteConfig } from '../types';
+
+export const siteConfig: SiteConfig = {
+  personalInfo: {
+    name: 'Your Name',
+    title: 'Web Developer & Designer',
+    location: 'Jhumra, Pakistan',
+    bio: 'A passionate web developer from Jhumra, Pakistan. I create beautiful, modern, and responsive websites that help businesses grow online. With expertise in React, TypeScript, and modern web technologies, I bring ideas to life through clean code and stunning designs.',
+    email: 'your.email@example.com',
+    phone: '+92 XXX XXXXXXX',
+  },
+  interests: [
+    {
+      id: '1',
+      title: 'Web Development',
+      description: 'Building modern, responsive websites with React, TypeScript, and Tailwind CSS',
+      icon: 'Code',
+    },
+    {
+      id: '2',
+      title: 'UI/UX Design',
+      description: 'Creating beautiful, intuitive user interfaces with attention to detail',
+      icon: 'Palette',
+    },
+    {
+      id: '3',
+      title: 'Animation & Motion',
+      description: 'Bringing websites to life with Framer Motion and CSS animations',
+      icon: 'Sparkles',
+    },
+    {
+      id: '4',
+      title: 'Photography',
+      description: 'Capturing moments and expressing creativity through the lens',
+      icon: 'Camera',
+    },
+    {
+      id: '5',
+      title: 'Learning',
+      description: 'Constantly exploring new technologies and improving my craft',
+      icon: 'BookOpen',
+    },
+    {
+      id: '6',
+      title: 'Travel',
+      description: 'Discovering new places and cultures for inspiration',
+      icon: 'MapPin',
+    },
+  ],
+  hobbies: [
+    {
+      id: '1',
+      title: 'Photography',
+      description: 'Street and portrait photography',
+      icon: 'Camera',
+    },
+    {
+      id: '2',
+      title: 'Reading',
+      description: 'Tech blogs, design books, and fiction',
+      icon: 'BookOpen',
+    },
+    {
+      id: '3',
+      title: 'Music',
+      description: 'Listening to various genres while coding',
+      icon: 'Music',
+    },
+    {
+      id: '4',
+      title: 'Sketching',
+      description: 'UI wireframes and creative doodles',
+      icon: 'PenTool',
+    },
+    {
+      id: '5',
+      title: 'Gaming',
+      description: 'Strategy and puzzle games',
+      icon: 'Gamepad2',
+    },
+    {
+      id: '6',
+      title: 'Cooking',
+      description: 'Experimenting with new recipes',
+      icon: 'UtensilsCrossed',
+    },
+  ],
+  personalityTraits: [
+    {
+      id: '1',
+      title: 'Creative',
+      description: 'Always thinking outside the box',
+      percentage: 95,
+    },
+    {
+      id: '2',
+      title: 'Detail-Oriented',
+      description: 'Obsessed with pixel-perfect designs',
+      percentage: 90,
+    },
+    {
+      id: '3',
+      title: 'Curious',
+      description: 'Never stop learning and exploring',
+      percentage: 98,
+    },
+    {
+      id: '4',
+      title: 'Empathetic',
+      description: 'Understanding users and clients deeply',
+      percentage: 88,
+    },
+    {
+      id: '5',
+      title: 'Persistent',
+      description: 'Turning challenges into opportunities',
+      percentage: 92,
+    },
+    {
+      id: '6',
+      title: 'Organized',
+      description: 'Clean code and structured workflows',
+      percentage: 85,
+    },
+  ],
+  favoriteThings: [
+    {
+      id: '1',
+      category: 'Colors',
+      items: ['#FA699E (Pink)', '#4ADD82 (Green)', '#FFE7F0 (Soft Pink)'],
+      icon: 'Palette',
+    },
+    {
+      id: '2',
+      category: 'Tools',
+      items: ['VS Code', 'Figma', 'GitHub', 'Vercel', 'ChatGPT'],
+      icon: 'Wrench',
+    },
+    {
+      id: '3',
+      category: 'Frameworks',
+      items: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+      icon: 'Layers',
+    },
+    {
+      id: '4',
+      category: 'Inspiration',
+      items: ['Dribbble', 'Behance', 'Awwwards', 'Pinterest'],
+      icon: 'Lightbulb',
+    },
+    {
+      id: '5',
+      category: 'Music',
+      items: ['Lo-fi beats', 'Ambient electronic', 'Indie pop'],
+      icon: 'Music',
+    },
+    {
+      id: '6',
+      category: 'Food',
+      items: ['Biryani', 'Chai', 'Chocolate', 'Fresh fruits'],
+      icon: 'Coffee',
+    },
+  ],
+  galleryImages: [
+    { id: '1', src: '/photos/WhatsApp Image 2026-11-10 at 10.55.37 PM.jpeg', alt: 'Photo 1', width: 800, height: 1000 },
+    { id: '2', src: '/photos/WhatsApp Image 2026-11-10 at 10.55.38 PM (1).jpeg', alt: 'Photo 2', width: 800, height: 1000 },
+    { id: '3', src: '/photos/WhatsApp Image 2026-11-10 at 10.55.38 PM.jpeg', alt: 'Photo 3', width: 800, height: 1000 },
+    { id: '4', src: '/photos/WhatsApp Image 2026-11-10 at 10.55.39 PM (1).jpeg', alt: 'Photo 4', width: 800, height: 1000 },
+    { id: '5', src: '/photos/WhatsApp Image 2026-11-10 at 10.55.39 PM (2).jpeg', alt: 'Photo 5', width: 800, height: 1000 },
+    { id: '6', src: '/photos/WhatsApp Image 2026-11-10 at 10.55.39 PM.jpeg', alt: 'Photo 6', width: 800, height: 1000 },
+    { id: '7', src: '/photos/WhatsApp Image 2026-11-10 at 10.57.14 PM.jpeg', alt: 'Photo 7', width: 800, height: 1000 },
+    { id: '8', src: '/photos/WhatsApp Image 2026-11-10 at 10.57.15 PM (1).jpeg', alt: 'Photo 8', width: 800, height: 1000 },
+    { id: '9', src: '/photos/WhatsApp Image 2026-11-10 at 10.57.15 PM.jpeg', alt: 'Photo 9', width: 800, height: 1000 },
+  ],
+  socialLinks: [
+    { platform: 'GitHub', url: 'https://github.com/yourusername', icon: 'Github' },
+    { platform: 'LinkedIn', url: 'https://linkedin.com/in/yourusername', icon: 'Linkedin' },
+    { platform: 'Instagram', url: 'https://instagram.com/yourusername', icon: 'Instagram' },
+    { platform: 'Twitter', url: 'https://twitter.com/yourusername', icon: 'Twitter' },
+    { platform: 'Email', url: 'mailto:your.email@example.com', icon: 'Mail' },
+  ],
+};

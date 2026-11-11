@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 antialiased;
+    background-color: #FFE7F0;
+  }
+  
+  ::selection {
+    @apply bg-primary-pink text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-white font-medium rounded-full transition-all duration-300;
+    background: linear-gradient(135deg, #FA699E 0%, #FF9FC7 100%);
+    box-shadow: 0 10px 30px -10px rgba(250, 105, 158, 0.5);
+  }
+  
+  .btn-primary:hover {
+    @apply transform -translate-y-1;
+    box-shadow: 0 15px 40px -10px rgba(250, 105, 158, 0.6);
+  }
+  
+  .btn-primary:active {
+    @apply transform translate-y-0;
+  }
+  
+  .card {
+    @apply bg-white/80 backdrop-blur-md rounded-3xl shadow-xl border border-white/20 overflow-hidden transition-all duration-500;
+  }
+  
+  .card:hover {
+    @apply shadow-2xl;
+    transform: translateY(-8px);
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+  
+  .section-title {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-1.5 w-3/4 rounded-full;
+    background: linear-gradient(90deg, #FA699E 0%, #4ADD82 100%);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, #FA699E 0%, #FF9FC7 100%);
+  }
+  
+  .green-gradient {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, #4ADD82 0%, #22c55e 100%);
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
