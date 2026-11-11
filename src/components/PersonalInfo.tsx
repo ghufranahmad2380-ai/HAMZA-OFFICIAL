@@ -8,7 +8,7 @@ import {
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { siteConfig } from '../data/config';
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
   MapPin, Heart, Coffee, Music, BookOpen, Camera, Gamepad2, PenTool, UtensilsCrossed,
   Palette, Wrench, Layers, Lightbulb, Sparkles, Target, Brain, Smile
 };
@@ -43,26 +43,29 @@ export function PersonalInfo() {
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cards.map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.95 }}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: 'easeOut' }}
-              className="card group p-6 relative overflow-hidden"
-            >
-              <div className="relative z-10">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5"
-                  style={{ background: card.color === 'primary-pink' ? 'rgba(250, 105, 158, 0.1)' : 'rgba(74, 221, 130, 0.1)' }}
-                >
-                  <iconMap[card.icon] className="w-7 h-7" style={{ color: card.color === 'primary-pink' ? '#FA699E' : '#4ADD82' }} />
+          {cards.map((card, i) => {
+            const Icon = iconMap[card.icon];
+            return (
+              <motion.div
+                key={card.title}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.95 }}
+                transition={{ duration: 0.6, delay: 0.1 + i * 0.1, ease: 'easeOut' }}
+                className="card group p-6 relative overflow-hidden"
+              >
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5"
+                    style={{ background: card.color === 'primary-pink' ? 'rgba(250, 105, 158, 0.1)' : 'rgba(74, 221, 130, 0.1)' }}
+                  >
+                    <Icon className="w-7 h-7" style={{ color: card.color === 'primary-pink' ? '#FA699E' : '#4ADD82' }} />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-gray-900 mb-2">{card.title}</h3>
+                  <p className="text-gray-600 text-sm mb-4">{card.desc}</p>
+                  <div className="text-gray-900 font-medium leading-relaxed">{card.content}</div>
                 </div>
-                <h3 className="font-display text-xl font-bold text-gray-900 mb-2">{card.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{card.desc}</p>
-                <div className="text-gray-900 font-medium leading-relaxed">{card.content}</div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

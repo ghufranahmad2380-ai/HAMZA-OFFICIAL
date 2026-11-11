@@ -30,8 +30,9 @@ export function About() {
             Get to Know Me Better
           </h2>
         </motion.div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
-<motion.div
+          <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -79,7 +80,7 @@ export function About() {
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             className="space-y-8"
           >
-<div className="prose max-w-none">
+            <div className="prose max-w-none">
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 {siteConfig.personalInfo.bio}
               </p>
@@ -135,4 +136,3 @@ export function About() {
     </section>
   );
 }
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">

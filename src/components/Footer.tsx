@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { 
-  Github, Linkedin, Instagram, Twitter, Mail, 
+  Mail, 
   Heart, Sparkles, Code, Palette, Camera
 } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, InstagramIcon, TwitterIcon } from './BrandIcons';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { siteConfig } from '../data/config';
 
@@ -12,7 +13,11 @@ export function Footer() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
   const socialIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-    Github, Linkedin, Instagram, Twitter, Mail
+    Github: GithubIcon,
+    Linkedin: LinkedinIcon,
+    Instagram: InstagramIcon,
+    Twitter: TwitterIcon,
+    Mail,
   };
 
   return (
@@ -69,7 +74,9 @@ export function Footer() {
           transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          {siteConfig.socialLinks.map((social, i) => (
+          {siteConfig.socialLinks.map((social, i) => {
+            const Icon = socialIcons[social.icon];
+            return (
             <motion.a
               key={social.platform}
               href={social.url}
@@ -87,9 +94,10 @@ export function Footer() {
               }}
               aria-label={social.platform}
             >
-              <socialIcons[social.icon] className="w-7 h-7" />
+              <Icon className="w-7 h-7" />
             </motion.a>
-          ))}
+            );
+          })}
         </motion.div>
 
         <motion.div

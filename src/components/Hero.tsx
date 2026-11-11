@@ -12,7 +12,7 @@ export function Hero() {
     animate: {
       y: [0, -20, 0],
       opacity: [0.4, 0.7, 0.4],
-      transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' },
+      transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' as const },
     },
   };
 
@@ -29,7 +29,9 @@ export function Hero() {
       y: [0, 10, 0],
       transition: { duration: 2, repeat: Infinity, ease: 'easeInOut' },
     },
-return (
+  };
+
+  return (
     <section
       ref={ref}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
@@ -185,14 +187,14 @@ return (
             className="relative"
           >
             <div className="relative">
-<motion.div
-                className="absolute -inset-4 rounded-[50%]"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(250, 105, 158, 0.3), rgba(74, 221, 130, 0.3))',
-                  filter: 'blur(30px)',
-                }}
-                animate={glowVariants}
-              />
+                <motion.div
+                  className="absolute -inset-4 rounded-[50%]"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(250, 105, 158, 0.3), rgba(74, 221, 130, 0.3))',
+                    filter: 'blur(30px)',
+                  }}
+                  animate={glowVariants}
+                />
 
               {[0, 1, 2].map((i) => (
                 <motion.div

@@ -29,7 +29,8 @@ export function Gallery() {
 
   return (
     <section ref={ref} id="gallery" className="relative py-24 lg:py-32 px-6" style={{ background: '#FFE7F0' }}>
-<motion.div
+      <div className="section-container">
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -97,7 +98,7 @@ export function Gallery() {
           </motion.div>
         </div>
       </div>
-<AnimatePresence>
+      <AnimatePresence>
         {selectedImage !== null && (
           <motion.div
             initial={{ opacity: 0 }}

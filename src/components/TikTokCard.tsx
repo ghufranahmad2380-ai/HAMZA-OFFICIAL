@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-
 export function TikTok() {
   return (
     <section id="tiktok" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-transparent via-primary-pink to-transparent">
@@ -11,7 +9,7 @@ export function TikTok() {
           <p className="text-gray-600 leading-relaxed">Scan the QR code below to discover my TikTok profile and start following my posts!</p>
           <button className="btn-primary w-full">Visit My TikTok</button>
           <img
-            src="/Users/HP/OneDrive/Desktop/hamza/tiktok qr code.jpeg"
+            src="/tiktok-qr.jpeg"
             alt="TikTok QR Code"
             className="w-full max-w-sm object-contain rounded-xl shadow-lg hover:shadow-2xl transition-shadow"
           />
