@@ -19,8 +19,35 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
+        // Inter and Playfair Display are the design faces. Google Fonts serves
+        // them pre-subsetted and the latin range stops at U+2215, so glyphs such
+        // as "∞" (U+221E) or non-Latin scripts must resolve through a fallback.
+        // The trailing families only ever apply to characters Inter/Playfair
+        // cannot draw, so the Latin design is untouched.
+        sans: [
+          'Inter',
+          'Segoe UI',
+          'Noto Sans',
+          'Noto Sans Arabic',
+          'Segoe UI Symbol',
+          'Apple Symbols',
+          'Noto Sans Symbols 2',
+          'Noto Sans Math',
+          'DejaVu Sans',
+          'system-ui',
+          'sans-serif',
+        ],
+        display: [
+          'Playfair Display',
+          'Segoe UI',
+          'Noto Sans',
+          'Noto Sans Arabic',
+          'Segoe UI Symbol',
+          'Apple Symbols',
+          'Noto Sans Math',
+          'DejaVu Sans',
+          'serif',
+        ],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

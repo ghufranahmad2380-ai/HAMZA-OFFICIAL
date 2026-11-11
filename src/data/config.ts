@@ -2,7 +2,7 @@ import type { SiteConfig } from '../types';
 
 export const siteConfig: SiteConfig = {
   personalInfo: {
-    name: 'Your Name',
+    name: 'Hamza',
     title: 'Web Developer & Designer',
     location: 'Jhumra, Pakistan',
     bio: 'A passionate web developer from Jhumra, Pakistan. I create beautiful, modern, and responsive websites that help businesses grow online. With expertise in React, TypeScript, and modern web technologies, I bring ideas to life through clean code and stunning designs.',
