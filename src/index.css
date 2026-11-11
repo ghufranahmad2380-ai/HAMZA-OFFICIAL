@@ -57,14 +57,21 @@
     background: linear-gradient(90deg, #FA699E 0%, #4ADD82 100%);
   }
   
+  /* NOTE: use the background-image longhand, never the `background` shorthand.
+     The shorthand resets background-clip to border-box, which turns the
+     transparent text into a solid gradient rectangle (the "box" bug). */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background: linear-gradient(135deg, #FA699E 0%, #FF9FC7 100%);
+    background-image: linear-gradient(135deg, #FA699E 0%, #FF9FC7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
   }
   
   .green-gradient {
     @apply bg-clip-text text-transparent;
-    background: linear-gradient(135deg, #4ADD82 0%, #22c55e 100%);
+    background-image: linear-gradient(135deg, #4ADD82 0%, #22c55e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 }
 
